@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRANS29 Signup</title>
+
+    <!-- Signup style.css-->
+    <link rel="stylesheet" href="signup.css">
+    
+    <!-- tahoma font link-->
+    <link rel="stylesheet" href="https://www.fonts.com/font/atlas-font-foundry/heimat-didone/10-extra-light"> 
+
+</head>
+
+<body>
+    <div class="borderStyle">
+      <form data-turbo="true" action="/session" accept-charset="UTF-8" method="get">
+    <!--logo container--> 
+    <div class="imgcontainer"> 
+    <img src="images/Sandy_Tsp-03_Single-02.jpg" alt="EMTRANS.Logo" class="avatar">
+    </div>
+    <div class="container">
+    <h1>Registration</h1>
+    <p style="text-align: center;font: bold;font-size: 18px;color: rgb(185, 2, 2)">Please fill in this form to create an account.</p>
+    </div>
+
+    <!-- Form container-->
+    
+        <!-- Employee ID field-->    
+        <label for="employeeId">
+        Employee ID
+        </label>
+        <span class="star"> * </span>
+        </label>
+        <input style="margin-bottom: 10px;margin-top: 5px;" type="text" id="employeeId" placeholder="Enter Employee ID" name="employeeId" required>
+        
+        <!-- Lastname field-->
+        <label for="fullname">
+        Full Name
+        </label>
+        <span class="star"> * </span>
+        </label>
+        <input style="margin-bottom: 10px;margin-top: 5px;" type="text" id="text" placeholder="Enter your full name" name="fullname" required>
+        
+        <!-- Contact field-->
+        <label for="Email">
+          Contact
+          </label>
+          <span class="star"> * </span>
+          </label>
+          <input style="margin-bottom: 10px;margin-top: 5px;" type="tel" id="number" placeholder="0000000000" name="contact" required>
+          
+        <!-- Email field-->
+        <label for="Email">
+        Email
+        </label>
+        <span class="star"> * </span>
+        </label>
+        <input style="margin-bottom: 10px;margin-top: 5px;" type="email" id="email" placeholder="example@gmail.com" name="email" required>
+        
+        <!-- Username field-->
+        <label for="Email">
+        Username
+        </label>
+        <span class="star"> * </span>
+        </label>
+        <input style="margin-bottom: 10px;margin-top: 5px;" type="text" id="text" placeholder="Username" name="username" required>
+          
+        <!-- Password field-->
+        <label for="password">
+        Password
+        <span class="star"> * </span>
+        </label>
+        <input type="password" id="Password" placeholder="Enter password" name="password" required>
+
+        <!-- Address field-->
+        <label for="Email">
+          Address
+          </label>
+          <span class="star"> * </span>
+          </label>
+          <input style="margin-bottom: 10px;margin-top: 5px;" type="text" id="text" placeholder="GPS Addresss" name="email" required>
+          
+                    
+        <!-- Signup button container-->
+        <button type="submit" id="login">
+        Next 
+        </button>
+          <!--Login container-->
+          <div style="text-align: center; margin-top: 10px">
+          <p class="already">Already have an account? <a href="signin.html">Login</a></p>
+          </div>
+        </form>   
+        </div>
+
+</body>
+</html>

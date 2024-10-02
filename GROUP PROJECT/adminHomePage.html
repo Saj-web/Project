@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Style-->
+    <link rel="stylesheet" href="adminHomePage.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>TRANS29 Admin</title>
+</head>
+<body>
+
+     <!--Side bar-->
+    <div class="sideBar">
+         <div class="sidebar-logo">
+          <img src="./images/Sandy_Tsp-03_Single-02.jpg" alt="" width="100" height="100">
+         </div>
+        <!--Side bar(Home)-->
+        <div class="sidebar-link">
+        <a href="adminHomePage.html">
+        <img src="./images/home.svg" alt="home">
+        <div class="text">Dashboard</div>
+        </a>
+        </div>
+
+        <!--Side bar(Drivers)-->
+        <div class="sidebar-link">
+        <a href="adminDriver.html">
+        <img src="./images/users.svg" alt="user" >
+        <div class="text">Drivers</div>
+        </a>
+        </div>
+
+        <!--Side bar(Buses)-->
+        <div class="sidebar-link">
+        <a href="adminBus.html">
+        <img src="./images/bus.png" alt="bus" style="height: 40px">
+        <div class="text">Buses</div>
+        </a>
+        </div>
+
+        <!--Side bar(View booking)-->
+        <div class="sidebar-link">
+        <a href="adminView.html">
+        <img src="./images/eye.svg" alt="eye" >
+        <div class="text">View booking</div>
+        </a>
+        </div>
+
+        <!--Side bar(Notification)-->
+        <div class="sidebar-link" style="position: relative">
+          <a href="adminNot.html">
+        <img src="./images/bell.svg" alt="Notification" >
+        <div class="text">Notification</div>
+        <div class="not-icon">
+          3
+        </div>
+        </a>
+        </div>
+
+        <!--Side bar(Log-out)-->
+        <div class="sidebar-link">
+        <a href="adminLogin.html" class="log-out">
+        <img src="./images/log-out.svg" alt="log-out">
+        <div class="text">Log-out</div>
+        </a>
+        </div>
+        
+    </div>
+
+    <!--Refresh Button-->
+    <div style="position: absolute;right: 40px;top: 10px">
+     <button onclick="refreshBars()" class="myBar">
+    <div class="refresh">
+    <i class="fa fa-refresh">
+    <div class="tooltip">refresh</div>
+    </i>
+   </button> 
+    </div>
+
+    <!--Total number of buses-->
+    <div class="preview info" style="width: 33.33%;margin-top: 45px">
+        <div>
+          <p>
+           Total Number of Buses
+          </p>
+          <p>
+            20
+          </p>
+          </div>
+        </div>
+
+        <!--Total number of Employees-->
+        <div class="preview info" style="background-color:rgb(79, 135, 154);width: 33.33%;margin-top: 45px">
+            <div>
+            <p>
+            Total Number of Employees
+            </p>
+            <p>
+            900
+            </p>
+            </div>
+            </div>
+
+         <!--Total number of Employees-->
+          <div class="preview info" style="background-color:rgb(255, 64, 64);width: 33.33%;margin-top: 45px">
+          <div>
+          <p>
+          Total Number of Departments
+          </p>
+          <p>
+           8
+          </p>
+          </div>
+          </div>
+
+            <!--Number of Routes-->
+            <div class="preview info" style="background-color:rgb(188, 188, 40);width: 33.33%;margin-top: 45px">
+            <div>
+            <p>
+            Number of Routes
+            </p>
+            <p>
+            <!--Excluding EMTRANS-->
+            6
+            </p>
+            </div>
+            </div>
+
+            <!--Working Hours-->
+            <div class="preview info" style="background-color:rgb(224, 170, 69);width: 33.33%;margin-top: 45px">
+            <div>
+            <p>
+            Working Hours
+            </p>
+            <p>
+            24/7
+            </p>
+            </div>
+            </div>
+
+            <!--Available Buses-->
+            <div class="preview info" style="background-color:rgb(156, 58, 58);width: 33.33%;margin-top: 45px">
+            <div>
+            <p>
+            Available Buses
+            </p>
+            <div id="myProgress">
+            <div id="myBars">78%</div>
+            </div> 
+            </div>
+            </div>
+
+            <!--Completed Routes-->
+            <div class="preview info" style="background-color:rgb(132, 132, 31);width: 33.33%;margin-top: 45px">
+            <div>
+            <p>
+            Completed Routes
+            </p>
+            <div id="myProgress">
+                <div id="myBar">10%</div>
+              </div> 
+            </div>
+            </div>
+
+            <!--Booking Slots Available-->
+            <div class="preview info" style="background-color:rgb(87, 153, 175);width: 33.33%;margin-top: 45px">
+            <div>
+             <p>
+            Booking Slot(s) Available
+            </p>
+            <div id="myProgress">
+              <div id="myBar-slot">50%</div>
+            </div>
+            </div>
+            </div>
+
+            <!--Drivers Available-->
+            <div class="preview info" style="width: 33.33%;margin-top: 45px">
+             <div>
+             <p>
+            Drivers Available
+            </p>
+            <div id="myProgress">
+              <div id="myBar-driver">90%</div>
+            </div>
+         </div>
+        </div>
+
+        <!--Time Slots-->
+        <div class="preview info" style="background-color:rgb(224, 170, 69);width: 33.33%;margin-top: 45px">
+            <div>
+            <p>
+            Time Slots
+            </p>
+            <p>
+            Morning-Afternoon-Evening
+            </p>
+            </div>
+            </div>
+
+    <!-- Add script for refreshing progress bars -->
+    <script>
+      function refreshBars() {
+          // Increase Completed Routes by 40%
+          var completedRoutesBar = document.getElementById("myBar");
+          var currentCompletedRoutesValue = parseInt(completedRoutesBar.innerHTML);
+          var newCompletedRoutesValue = Math.min(100, currentCompletedRoutesValue + 60);
+          completedRoutesBar.innerHTML = newCompletedRoutesValue + "%";
+
+          // update the background width
+          completedRoutesBar.style.width = newCompletedRoutesValue +"%";
+          
+          // Decrease Available Buses by 30%
+          var availableBusesBar = document.getElementById("myBars");
+          var currentAvailableBusesValue = parseInt(availableBusesBar.innerHTML);
+          var newAvailableBusesValue = Math.max(0, currentAvailableBusesValue - 36);
+          availableBusesBar.innerHTML = newAvailableBusesValue + "%";
+
+          // update the background width
+          availableBusesBar.style.width = newAvailableBusesValue +"%";
+
+          // Increase Booking Slots Available by 10%
+          var bookingSlotBar = document.getElementById("myBar-slot");
+          var currentBookingSlotValue = parseInt(bookingSlotBar.innerHTML);
+          var newBookingSlotValue = Math.min(100, currentBookingSlotValue + 10);
+          bookingSlotBar.innerHTML = newBookingSlotValue + "%";
+
+          // update the background width
+          bookingSlotBar.style.width = newBookingSlotValue +"%";
+
+          // Decrease Drivers Available by 60%
+          var driversAvailableBar = document.getElementById("myBar-driver");
+          var currentDriversAvailableValue = parseInt(driversAvailableBar.innerHTML);
+          var newDriversAvailableValue = Math.max(0, currentDriversAvailableValue - 54);
+          driversAvailableBar.innerHTML = newDriversAvailableValue + "%";
+
+          // update the background width
+          driversAvailableBar.style.width = newDriversAvailableValue +"%";   
+      }
+
+          //Disable the browser's back button
+          history.pushState(null,null,location.href);
+          window.onpopstate=function(){
+          history.go(1);
+        };
+  </script>
+
+</body>
+</html>

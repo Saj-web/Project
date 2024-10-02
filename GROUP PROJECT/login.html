@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRANS29 Login</title>
+
+    <!-- Login style.css-->
+    <link rel ="stylesheet" href="login.css">
+
+</head>
+
+<body>
+    <!-- Form container-->
+    <div class="borderStyle">
+        <form action="/action_page.php" method="get">
+
+            <!--Image container-->
+            <div class="imgcontainer">
+            <img src="images/Sandy_Tsp-03_Single-02.jpg" alt="signin logo" class="avatar">
+            </div>
+
+            <!--Employee field--> 
+            <div class="container">
+            <label for="username"></label>
+            </label><b>Employee ID</b>
+            <span class="star">
+            <sup>
+            *
+            </sup>
+            </span>
+            </label>
+            <input type="text" id="employeeId" placeholder="Enter Employee ID" name="Employee ID" required>
+          
+    
+            <!-- Password field-->
+            <label for="password">
+            <b>
+            Password
+            </b>
+            <span class="star">
+            <sup>
+            *
+            </sup>
+            </span>
+            </label>
+            <div class="password-container">
+              <input type="password" name="Password" id="Password" placeholder="Enter Password" required>
+              <span class="lock-icon" onclick="togglePasswordVisibility()">&#x1F512;</span>
+            </div>
+
+            <!-- Login field-->
+            <button type="submit" id="login">
+            Login
+            </button>
+            <!-- Checkbox field-->
+            <label>
+            <input type="checkbox" name="remember" style="margin-bottom:0px "> Remember me
+            </label>
+
+            </form>
+            
+
+<!-- Cancel button & password field-->
+<div class="cancel-container">
+    <a href="homePage.html">
+    <button type="button" class="cancelbtn">Cancel</button>
+    </a>
+    <span class="password">
+    Forgot <a href="#password">password?</a></span>
+</div>
+<div class="dont-acc" style="text-align: center; margin-top: 20px">
+   <p>Don't have an account?<a href="signup1.html"> Register.</a></p> 
+</div>
+</div>
+
+<script>
+
+            // Create a toggle for password visibility
+            function togglePasswordVisibility() {
+                var passwordInput = document.getElementById("Password");
+                var lockIcon = document.querySelector(".lock-icon");
+    
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    lockIcon.innerHTML = "&#x1F513;"; // Unicode for the unlocked icon
+                } else {
+                    passwordInput.type = "password";
+                    lockIcon.innerHTML = "&#x1F512;"; // Unicode for the closed Lock icon
+                }
+
+                passwordInput.classList.toggle("visible");
+            }
+
+            //Disable the browser's back button
+            history.pushState(null,null,location.href);
+            window.onpopstate=function(){
+              history.go(1);
+            };
+
+                // Get the form element
+                const form = document.querySelector('form');
+                
+           // Adding an action listener to the form submit button
+            form.addEventListener('submit', function(event){
+            event.preventDefault();// prevent the default form submission
+
+            // Get the input element
+            var employeeIdInput = document.getElementById("employeeId");
+            //Get the login button
+            var loginBtn=document.getElementById('login');
+
+            // Add an event listener for login button click
+            loginBtn.addEventListener('click',function(){
+              //Get the value of the input
+              var employeeId= employeeIdInput.value;
+
+              // Create a regular expression pattern to match the desired format
+              var pattern = /^\d{6}B$/;
+                
+              // Check if the input matches the pattern
+              if (pattern.test(employeeId)) {
+                // Input is valid
+                console.log('Valid employee ID')
+                window.location.href="welcome.html"
+              } else {
+                // Input is invalid
+                console.log('Inalid employee ID.Expexted 6 digits followed by hypen B')
+                alert('invalid employee ID');
+              }
+            });
+            });
+        </script>
+</body>
+</html>

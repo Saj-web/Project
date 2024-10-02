@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.75)), url(public-bus-with-no-people-during-covid19-worldwide-epidemic.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.text {
+    color: #fff;
+    background-color: #666;
+    border-radius: 10px;
+    height: 400px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    text-align: center;
+    padding: 10px;
+}
+
+td, th {
+    padding: 20px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.btns button {
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btns .backButton {
+    background-color: red;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btns .backButton:hover {
+    background-color: rgb(137, 35, 35);
+}
+
+.btns .bookButton {
+    background-color: green;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btns .bookButton:hover {
+    background-color: rgb(25, 98, 25);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.prev-next {
+    cursor: pointer;
+    position: absolute;
+    top: 200;
+    left: 100px;
+    width: auto;
+    padding: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev-next .prev {
+    left: 0;
+}
+
+.prev-next .next {
+    position: absolute;
+    right: -1400px;
+}
+
+.dotName {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin-top: -60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}

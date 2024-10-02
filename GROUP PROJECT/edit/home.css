@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --color: #9fa500f2;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 20px;
+  
+  }
+  
+  .navbar a:hover, .dropdown:hover, .dropbtn:focus {
+    background-color: red;
+  }
+  
+
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  button.dropbtn  {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color:rgb(221, 221,221);
+  }
+  
+  .show {
+    display: block;
+  }
+
+.landing {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(smiley-woman-posing-car.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+.landing-text {
+    max-width: 1000px;
+}
+
+.landing h1 {
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.landing-text p {
+    color: #fff;
+    max-width: 800px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.feedback button {
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.read {
+    background-color: yellow;
+}
+
+button.read:hover {
+    background-color: rgb(160, 160, 12);
+    color: #fff;
+}
+
+button.mailto {
+    background-color: #333;
+}
+
+button.mailto:hover {
+    background-color: #000;
+}
+
+button.mailto a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+    height: 700px;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid;
+}
+
+.sec-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.sec-details {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec-details img {
+    margin-bottom: 10px;
+}
+
+.sec-details h3 {
+    font-size: 18px;
+    color: var(--color);
+    margin-bottom: 10px;
+}
+
+.sec-details p {
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about h3 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: var(--color);
+}
+
+.about-info {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-num {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: .5px solid;
+    justify-content: center;
+}
+
+.about-num span {
+    font-size: 60px;
+    color: var(--color);
+    font-weight: 600;
+}
+
+.about-num p {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.feedback-container {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(public-bus-with-no-people-during-covid19-worldwide-epidemic.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+form {
+    width: 500px;
+    padding: 30px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid #fff;
+}
+
+.container input {
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+    margin: 10px 0;
+    outline: none;
+    font-size: 16px;
+}
+
+.container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    margin: 10px 0;
+}
+
+button.button-submit {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+button.button-submit:hover {
+    background-color: rgb(173, 173, 12);
+    color: #fff;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+
+footer .assist a {
+    color: #fff;
+    text-decoration: none;
+}

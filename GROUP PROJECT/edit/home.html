@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <!-- Navigation bar and image-->
+        <div class="bg-image img1">
+        <div class="navbar">
+        <a href="#" style="font-size: 16px; margin-top: 1px">EMT<span style="color: rgb(255, 230, 86);font-style: bold;">RANS</span></a>
+        <div class="nav">
+        <a href="homePage.html">Home
+          <i class="fa fa-home"></i>
+        </a>
+      
+        <!-- Drop down field-->
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Menu
+          <!--Symbol beside the menu-->
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#book-bus">Book A Bus</a>
+          <a href="#view-ticket">View Booking</a>
+          <a href="#cancel">Cancel Booking</a>
+        </div>
+        </div> 
+      
+        <!-- Continuation of navigation bar-->
+        <a href="#about">About
+          <i class="fa fa-info-circle"></i>
+        </a>
+        <a href="login.html">Login
+          <i class="fa fa-sign-in"></i>
+        </a>
+      </div>
+      </div>
+        
+      <!-- Site info-->
+      <div class="landing">
+        <div class="landing-text">
+            <h1>Welcome To EMT<span style="color: rgb(255, 230, 86);font-style: bold">RANS</span></h1>
+        <p>EMT<span style="color: rgb(255, 230, 86);font-style: bold">RANS</span>
+        <span style="color: rgb(255, 255, 255)">
+          is an online bus booking that is designed for Accra Technical University employees to provide a bus transportation
+          system,a facility to reserved seats,cancellation of seats and different
+          types of enquiry which need an instant and quick reservation.It is a web software 
+          solution designed to provide employees with a personalized easy-to-utilize user experience for booking
+          and purchasing tickets online. It stores employees's data,scheduled routes,and other information.
+      </span>
+      </p>
+        </div>
+        
+      <!-- Read more -->
+      <div class="feedback">
+      <button class="button read">Read More</button>
+      
+      <!--Contact us-->
+      <button class="button mailto"><a href="mailto:ahmedalibaba247@gmail.com">Contact Us</a></button>
+      </div>
+        </div>
+      </div>
+
+      <section>
+        <div class="sec-info">
+            <div class="sec-details">
+                <img src="../images/feature-icon-3.png" alt="" width="150">
+                <h3>Attractive Journey</h3>
+                <p>EMTRANS is committed to make
+                your journey full of comfort & excitement</p>
+            </div>
+            <div class="sec-details">
+                <img src="../images/ticket.jpg" alt="" width="150">
+                <h3>Ticket In Mobile</h3>
+                <p>No fear of losing the ticket.</p>
+            </div>
+            <div class="sec-details">
+                <img src="../images/safety.jpeg" alt="" width="150">
+                <h3>Safety And Security</h3>
+                <p>No fear of losing the ticket.
+                EMTRANS assures its passengers a safe &
+                secure journey.</p>
+            </div>
+        </div>
+        <div class="about">
+            <h3>ABOUT ACCRA TECHNICAL UNIVERSITY</h3>
+            <div class="about-info">
+                <div class="about-num">
+                    <span>2</span>
+                    <p>Years Of Experience</p>
+                </div>
+                <div class="about-num">
+                    <span>500</span>
+                    <p>Happy Employees</p>
+                </div>
+                <div class="about-num">
+                    <span>8</span>
+                    <p>Number of buses</p>
+                </div>
+                <div class="about-num">
+                    <span>20</span>
+                    <p>20 number of Departments</p>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+      
+        
+       <!--Entering of feedback field-->
+       <div class="feedback-container">
+        <form action="/action_page.php" method="post">
+      
+          <!-- Username field--> 
+          <div class="container">
+              <input type="text" placeholder="Enter your name" name="name" required>
+          </div>
+      
+            <!-- Email field--> 
+          <div class="container">
+              <input type="email" placeholder="Enter Email" name="email" required>
+            </div>
+            
+            <!-- Comment section-->
+            <div class="container">
+                <textarea name="comment" id="usrform" cols="50" rows="4" placeholder="Enter your feedback"></textarea>
+              </div>
+      
+              <!-- Sumbit button field-->
+              <div class="feedback">
+              <button class="button-submit" type="submit">
+                Submit </button>
+              </div>  
+              </form>
+            </div>
+          </div>
+      </div>
+      <footer>
+        <i class="fa fa-facebook"> emtransagh</i><br>
+        <i class="fa fa-twitter"> @emtrans_agh</i><br>
+        <i class="fa fa-telegram"> emtrans/agh.online</i><br>
+        <i class="fa fa-instagram"> emtrans_agh</i>
+        <div class="assist" style="color: white">
+          For any assistance 
+          <i class="fa fa-whatsapp">
+           <a href="Wa.me/+233243534849"> +233(0)243534849</a>
+          </i>
+        </div>
+      </footer>
+      <!-- Script js-->
+      <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+        }
+      }
+      
+      document.querySelector('.dropdown-content').addEventListener('click',
+      function(){
+       alert('Kindly Login First! ')
+      });
+      
+      </script>
+</body>
+</html>
+      

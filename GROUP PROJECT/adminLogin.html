@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANS29 Admin</title>
+
+    <!--Style(css)-->
+   <link rel="stylesheet" href="adminLogin.css">
+
+</head>
+<body>
+  <div class="borderStyle">
+
+    <!--Form field-->
+    <form id="adminLoginForm" method="get">
+
+           <!--Image field-->
+           <div class="imgcontainer"> 
+              <img src="images/Sandy_Tsp-03_Single-02.jpg" alt="EMTRANS.Logo" class="avatar">
+              </div>
+        
+              <!--Header-->
+            <h2> Admin Login</h2>
+
+      <div>
+        <!-- Username field-->
+        <label for="adminUsername"> 
+          Username
+        </label>
+        <input type="text" name="Username" id="Username" placeholder="Enter username" required>
+      </div>
+
+        <!-- Password field-->
+        <div>
+        <label for="adminPassword">
+          Password
+        </label>
+        <div class="password-container">
+            <input type="password" name="Password" id="Password" placeholder="Enter Password" required>
+            <span class="lock-icon" onclick="togglePasswordVisibility()">&#x1F512;</span>
+          </div>
+        </div>
+
+        <!-- login field-->
+        <div>
+        <button type="submit" formaction="./mainPage.html">
+        Login
+        </button>
+      </div>
+    </form>
+    </div>
+     <!--Js-->
+ <script>
+     // Get the form element
+     const form = document.querySelector('form');
+
+     // Adding an action listener to the form submit button
+     form.addEventListener('submit', function(event){
+       event.preventDefault();// prevent the default form submission
+
+       // Retrieve the entered username and password
+     const Username = document.getElementById('Username').value;
+     const Password = document.getElementById('Password').value;
+
+     // Check if the credentials match the user's entered details
+     if(Username === 'Ahmed' && Password === 'ahmedali'){
+        alert("Login successful! Welcome, " + Username + "!")
+         // Redirect the admin to it's webpage(adminPage)
+        window.location.href='adminHomePage.html';
+     }
+       // Display an error message
+     else{
+         alert('Invalid Username or Password. Please try again.');
+     }
+     });
+     // Create a toggle for password visibility
+     function togglePasswordVisibility() {
+                var passwordInput = document.getElementById("Password");
+                var lockIcon = document.querySelector(".lock-icon");
+    
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    lockIcon.innerHTML = "&#x1F513;"; // Unicode for the unlocked icon
+                } else {
+                    passwordInput.type = "password";
+                    lockIcon.innerHTML = "&#x1F512;"; // Unicode for the closed Lock icon
+                }
+
+                passwordInput.classList.toggle("visible");
+            }
+
+            //Disable the browser's back button
+            history.pushState(null,null,location.href);
+            window.onpopstate=function(){
+              history.go(1);
+            };
+ </script>
+</body>
+</html>

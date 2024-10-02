@@ -1,0 +1,126 @@
+/*Body*/
+body{
+    background-color: rgb(250, 250, 250);
+    height: 60%;
+}
+
+/* Side bar*/
+.sideBar{
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 20px 0;
+    width: 120px;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+/* Side bar details(home,drivers, etc)*/
+.sidebar-link{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 85px;
+ margin-bottom: 15px;
+}
+.sidebar-link:hover{
+background-color: rgb(248, 248, 248);
+cursor: pointer;
+}
+.sidebar-link img{
+ height: 24px;
+}
+
+.sidebar-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+/*Contents on home page of admin(total number of employees,completed routes,etc)*/
+.preview{
+min-width: 300px;
+display: inline-block;
+vertical-align: top;
+margin:20px 0 0 140px;
+background-color: rgb(133, 253, 133);
+color: white;
+transition: all 0.10ms;
+}
+.preview:hover{
+box-shadow:1px 1px 10px rgba(0,0,0,0.5);
+border-radius: 10px;
+cursor: pointer;
+padding: 2px;
+}
+
+/*Text in contents on the home page of admin*/
+.info{
+margin-right: 20px;
+font-size: 18px;
+}
+
+p{
+text-align: center;
+}
+
+/* Complete area for the progress bar*/
+#myProgress {
+width: 80%;
+background-color: #ddd;
+margin-left: 35px;
+}
+
+/* Space taken by the progress bar for completed routes*/
+#myBar{
+width: 10%;
+height: 30px;
+background-color: #04AA6D;
+text-align: center;
+line-height: 30px;
+color: white;
+margin-bottom: 20px;
+}
+
+/* Space taken by the progress bar for Available Buses*/
+#myBars{
+width: 78%;
+height: 30px;
+background-color: #04AA6D;
+text-align: center;
+line-height: 30px;
+color: white;
+margin-bottom: 20px;
+}
+
+/* Space taken by the progress bar for booking slots available*/
+#myBar-slot{
+width: 50%;
+height: 30px;
+background-color: #04AA6D;
+text-align: center;
+line-height: 30px;
+color: white;
+margin-bottom: 20px;
+}
+
+/* Space taken by the progress bar for drivers Available*/
+#myBar-driver{
+width: 90%;
+height: 30px;
+background-color: #04AA6D;
+text-align: center;
+line-height: 30px;
+color: white;
+margin-bottom: 20px;
+}

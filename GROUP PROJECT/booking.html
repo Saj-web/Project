@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="bg-image img4">
+        <div class="navbar">
+            <a href="#" style="font-size: 16px; margin-top:0">TRANS<span style="color: rgb(255, 230, 86);font-style: bold;">29</span></a>
+            <div class="navbar-info">
+            <a href="welcome.html">Home
+            <i style="color:white" class="fa fa-home"></i>
+            </a>
+            <!-- Drop down field-->
+            <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Menu
+              <!--Symbol beside the menu-->
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+              <a href="booking.html">Book A Bus</a>
+              <a href="#view-ticket" class="viewBooking">View Booking</a>
+              <a href="#cancel" class="cancelBooking">Cancel Booking</a>
+            </div>
+            </div> 
+          
+            <!-- Continuation of navigation bar-->
+            <a href="adminLogin.html" target="_blank">Admin
+              <i class="fa fa-user"></i>
+            </a>
+            <a href="login.html">Logout
+            <i class="fa fa-sign-out"></i>
+          </a>
+          </div>
+          </div>
+        <form action="/action_page.php" method="get">
+          <div class="bg-text" style="margin-top: 5px">
+           <h2>Book A Bus</h2>
+        <!--Departure dropdown field-->
+        <div class="select-container">
+        <select class="select-box" name="Departure" id="Departure" required >
+          <option selected disabled hidden>Departure</option>
+          <option value="AGH">AGH</option>
+          <option value="Tema">Tema</option>
+          <option value="Ashaiman">Ashaiman</option>
+          <option value="Kasoa">Kasoa</option>
+          <option value="Pokuase">Pokuase</option>
+          <option value="Osu">Osu</option>
+          <option value="Madina">Madina</option>
+        </select>
+         </div>
+
+        <!--Arrival dropdown field-->
+        <div class="select-container">
+            <select class="select-box" name="Arrival" id="Arrival" required >
+              <option selected disabled hidden>Arrival</option>
+              <option value="AGH">AGH</option>
+              <option value="Tema">Tema</option>
+              <option value="Ashaiman">Ashaiman</option>
+              <option value="Kasoa">Kasoa</option>
+              <option value="Pokuase">Pokuase</option>
+              <option value="Osu">Osu</option>
+              <option value="Madina">Madina</option>
+            </select>
+             </div>
+            <!-- date field-->  
+            <div style="position: relative"> 
+            <input type="date" class="select-date" class="form-control" id="currentDate" name="date" required>
+          </div>
+          <div>
+            <input type="time" class="select-time" name="" id="">
+          </div>
+            <div>
+           <button class="button" id="search">Search</button>
+          </div>
+          </div>
+        </form>
+    </div>
+
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+
+    // Disallowing a user from chosing same option twice
+    var departureSelect = document.getElementById('Departure');
+    var arrivalSelect = document.getElementById('Arrival');
+
+    departureSelect.addEventListener('change',function(){
+      const selectedOption=departureSelect.value;
+
+      arrivalSelect.querySelectorAll('option').forEach(function(option){
+        option.disabled = option.value === selectedOption;
+      });
+    });
+
+    // Get the form element
+    const form = document.querySelector('form');
+
+// Adding an action listener to the form submit button
+form.addEventListener('submit', function(event){
+  event.preventDefault();// prevent the default form submission
+
+  // Retrieve the entered departure and arrival
+var departure = document.getElementById('Departure').value;
+var arrival = document.getElementById('Arrival').value;
+
+// Check if the credentials match the user's entered details
+if(departure === 'AGH' && arrival === 'Tema'){
+
+    // Redirect the user to the booking page
+    alert('Bus is available from: '+departure +" to " +arrival);
+    window.location.href='timeslotDeparture.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'AGH' && arrival === 'Ashaiman'){
+
+    // Redirect the user to the booking page
+    alert('Bus is available from: '+departure +" to " +arrival);
+    window.location.href='timeslotDeparture.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'AGH' && arrival === 'Kasoa'){
+
+// Redirect the user to booking page
+alert('Bus is available from: '+departure +" to " +arrival);
+window.location.href='timeslotDeparture.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'AGH' && arrival === 'Pokuase'){
+
+// Redirect the user to booking page
+alert('Bus is available from: '+departure +" to " +arrival);
+window.location.href='timeslotDeparture.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'AGH' && arrival === 'Osu'){
+
+// Redirect the user to booking page
+alert('Bus is available from: '+departure +" to " +arrival);
+window.location.href='timeslotDeparture.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'AGH' && arrival === 'Madina'){
+
+// Redirect the user to booking page
+alert('Bus is available from: '+departure +" to " +arrival);
+window.location.href='timeslotDeparture.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'Tema' && arrival === 'AGH'){
+
+// Redirect the user to booking page
+alert('Bus is available from: '+departure +" to " +arrival);
+window.location.href='timeslotArrivalTema.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'Ashaiman' && arrival === 'AGH'){
+
+// Redirect the user to booking page
+alert('Bus is available from: '+departure +" to " +arrival);
+window.location.href='timeslotArrivalAsh.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'Kasoa' && arrival === 'AGH'){
+
+// Redirect the user to booking page
+alert('Bus is available from: '+departure +" to " +arrival);
+window.location.href='timeslotArrivalKasoa.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'Pokuase' && arrival === 'AGH'){
+
+// Redirect the user to booking page
+alert('Bus is available from: '+departure +" to " +arrival);
+window.location.href='timeslotArrivalPok.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'Osu' && arrival === 'AGH'){
+
+// Redirect the user to booking page
+alert('Bus is available from: '+departure +" to " +arrival);
+window.location.href='timeslotArrivalOsu.html';
+}
+
+// Check if the credentials match the user's entered details
+else if(departure === 'Madina' && arrival === 'AGH'){
+
+// Redirect the user to booking page
+alert('Bus is available from: '+departure +" to " +arrival);
+window.location.href='timeslotArrivalMa.html';
+}
+
+// Display an error message
+else{
+    alert('Bus is unavailable from: '+departure +" to " +arrival +" OR Invalid entry");
+}
+});
+
+document.querySelector('.viewBooking').addEventListener('click',
+function(){
+ alert('Booked ticket will be sent to your email account')
+ window.location.href='booking.html';
+});
+
+
+document.querySelector('.cancelBooking').addEventListener('click',
+function(){
+ alert('Booking cancelled successfully! ')
+ window.location.href='booking.html';
+});
+
+</script>
+</body>
+</html>

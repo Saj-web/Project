@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRANS29 Booking</title>
+
+    <!-- Style-->
+    <link rel="stylesheet" href="timeslot.css">
+
+</head>
+<body>
+    <div class="slideshow-container">
+
+      <!-- First slide show-->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <div class="text">
+            <div class="container">
+                <h2>TRANS<span style="color: rgb(255, 230, 86)">29 </span> Bus Booking</h2>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Employee</th>
+                      <th style="color: rgb(1, 95, 61)">Departure Time</th>
+                      <th style="color:rgb(211, 7, 7)">Arrival Time</th>
+                      <th> </th>
+                      <th> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td id="currentDate"> Selected date</td>
+                      <td id="employeeName">Employee Name</td>
+                      <td id="departure" style="color: rgb(1, 95, 61);font-size: 18px">6:30 GMT</td>
+                      <td id="arrival" style="color:rgb(211, 7, 7);font-size: 18px">--NA</td>
+                      
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btns">
+                  <button class="backButton" formaction="booking.html">back</button>
+                  <button class="bookButton">book</button>
+              </div>
+              </div>
+          </div>
+        </div>
+        
+        <!-- Second slide show-->
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <div class="text">
+                <div class="container">
+                        <h2>TRANS<span style="color: rgb(255, 230, 86)">29 </span> Bus Booking</h2>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Date</th>
+                              <th>Employee</th>
+                              <th style="color: rgb(1, 95, 61)">Departure Time</th>
+                              <th style="color:rgb(211, 7, 7)">Arrival Time</th>
+                              <th> </th>
+                              <th> </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td id="currentDate">Selected date</td>
+                              <td id="employeeName">Employee Name</td>
+                              <td id="departure" style="color: rgb(1, 95, 61);font-size: 18px"> 14:30 GMT</td>
+                              <td id="arrival" style="color:rgb(211, 7, 7);font-size: 18px">--NA</td>
+                              
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="btns">
+                          <button class="backButton" formaction="booking.html">back</button>
+                          <button class="bookButton">book</button>
+                      </div>
+                 </div>
+          </div>
+        </div>
+        
+        <!-- Third slide show-->
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <div class="text">
+                <div class="container">
+                        <h2>TRANS<span style="color: rgb(255, 230, 86)">29 </span> Bus Booking</h2>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Date</th>
+                              <th>Employee</th>
+                              <th style="color: rgb(1, 95, 61)">Departure Time</th>
+                              <th style="color:rgb(211, 7, 7)">Arrival Time</th>
+                              <th> </th>
+                              <th> </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td id="currentDate">Selected date</td>
+                              <td id="employeeName">Employee Name</td>
+                              <td id="departure" style="color: rgb(1, 95, 61);font-size: 18px">22:30 GMT</td>
+                              <td id="arrival" style="color:rgb(211, 7, 7);font-size: 18px"> --NA</td>
+                              
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="btns">
+                          <button class="backButton" formaction="booking.html">back</button>
+                          <button class="bookButton">book</button>
+                      </div>
+                 </div>
+          </div>
+        </div>
+        
+        <!--Prev & Next button-->
+        <div class="prev-next">
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+        
+        </div>
+        <br>
+        
+        <!-- Dots field-->
+        <div class="dotName" style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+
+           // slide default number
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Setting prev & next
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Setting current slide value to prev & next value
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        // Slide show loop
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        
+        // Adding an alert to when button is clicked
+        document.querySelectorAll('.bookButton').forEach(function(button){
+        button.addEventListener('click',function(){
+            alert('Booking successful!');
+            window.location.href='booking.html';
+        });
+        });
+
+        // Making back-button go to booking page on clicked
+        document.querySelectorAll('.backButton').forEach(function(button){
+        button.addEventListener('click',function(){
+        window.location.href='booking.html';
+       });
+       });
+
+        </script>
+        
+</body>
+</html>

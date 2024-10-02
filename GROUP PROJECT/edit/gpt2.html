@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" href="gp2.css">
+</head>
+<body>
+
+<table id="data-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Contact</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="table-body">
+        <!-- Table body content will be dynamically added here -->
+    </tbody>
+</table>
+
+<button onclick="addRow()">Add Row</button>
+
+<div id="edit-modal" class="modal">
+    <h2>Edit Row</h2>
+    <form id="edit-form">
+        <input type="number" id="edit-id" placeholder="New ID">
+        <input type="text" id="edit-name" placeholder="New Name">
+        <input type="text" id="edit-role" placeholder="New Role">
+        <input type="number" id="edit-contact" placeholder="New Contact">
+        <input type="text" id="edit-status" placeholder="New Status">
+        <button type="button" onclick="saveEdit()" class="saveBtn">Save</button>
+        <button type="button" onclick="closeModal()" class="clsBtn">Cancel</button>
+    </form>
+</div>
+
+<script>
+    function addRow() {
+        var tableBody = document.getElementById("table-body");
+        var newRow = tableBody.insertRow(tableBody.rows.length);
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+        var cell6 = newRow.insertCell(5);
+
+        // You can customize the content you want to add
+        cell1.innerHTML = "New ID";
+        cell2.innerHTML = "New Name";
+        cell3.innerHTML = "New Role";
+        cell4.innerHTML = "New Contact";
+        cell5.innerHTML = "New Status";
+        cell6.innerHTML = "<button onclick='openModal(this)'>Edit</button> | <button onclick='deleteRow(this)'>Delete</button>";
+    }
+
+    function openModal(button) {
+        var row = button.parentNode.parentNode;
+        var cells = row.getElementsByTagName("td");
+
+        document.getElementById("edit-id").value = cells[0].innerHTML;
+        document.getElementById("edit-name").value = cells[1].innerHTML;
+        document.getElementById("edit-role").value = cells[2].innerHTML;
+        document.getElementById("edit-contact").value = cells[3].innerHTML;
+        document.getElementById("edit-status").value = cells[4].innerHTML;
+
+        document.getElementById("edit-modal").style.display = "block";
+    }
+
+    function saveEdit() {
+    var row = document.getElementById("edit-modal").parentNode;
+    var cells = row.getElementsByTagName("td");
+
+    cells[0].innerHTML = document.getElementById("edit-id").value;
+    cells[1].innerHTML = document.getElementById("edit-name").value;
+    cells[2].innerHTML = document.getElementById("edit-role").value;
+    cells[3].innerHTML = document.getElementById("edit-contact").value;
+    cells[4].innerHTML = document.getElementById("edit-status").value;
+
+    closeModal();
+    }
+
+    function closeModal() {
+        document.getElementById("edit-modal").style.display = "none";
+    }
+
+    function deleteRow(button) {
+        var row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+    }
+</script>
+
+</body>
+</html>

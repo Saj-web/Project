@@ -1,0 +1,14 @@
+#staff-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#staff-table th, #staff-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#staff-table th {
+    background-color: #f0f0f0;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+</head>
+<body>
+
+    <h1>Registration</h1>
+    <form id="registrationForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <button type="button" onclick="registerUser()">Register</button>
+    </form>
+
+    <h1>Login</h1>
+    <form id="loginForm">
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" required>
+        <br>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required>
+        <br>
+        <button type="button" onclick="loginUser()">Login</button>
+    </form>
+
+    <script>
+        // Sample user object to store registered users
+        var registeredUsers = [];
+
+        function registerUser() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Check if the email is already registered
+            if (registeredUsers.some(user => user.email === email)) {
+                alert("Email already registered. Please use a different email.");
+            } else {
+                // Add the user to the registeredUsers array
+                registeredUsers.push({ email: email, password: password });
+                alert("Registration successful! You can now log in.");
+            }
+
+            // Clear the registration form
+            document.getElementById("registrationForm").reset();
+        }
+
+        function loginUser() {
+            var loginEmail = document.getElementById("loginEmail").value;
+            var loginPassword = document.getElementById("loginPassword").value;
+
+            // Check if the email and password match any registered user
+            var user = registeredUsers.find(user => user.email === loginEmail && user.password === loginPassword);
+
+            if (user) {
+                alert("Login successful! Welcome, " + user.email + "!");
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+
+            // Clear the login form
+            document.getElementById("loginForm").reset();
+        }
+    </script>
+
+</body>
+</html>

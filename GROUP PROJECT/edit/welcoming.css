@@ -1,0 +1,76 @@
+/* Body and html*/
+body,html{
+    height: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  /* Background image*/
+  .bg-image{
+    /* Full height*/
+    height: 230%;
+    /* Center and scale the image in the center nicely*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+
+  /* Image used*/
+  .img2 {
+    background-image: url(./images/istockphoto-1195460901-1024x1024.jpg);
+  }
+  /* Image used for booking.html*/
+  .img4{
+    background-image: url(./images/istockphoto-486861496-1024x1024.jpg) 
+  }
+
+  /* Welcome/reserve your seat*/
+  .bg-text{
+    /* Fallback color*/
+    background-color: rgb(0,0,0);
+    /* See through*/
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border:2px solid hsl(0, 0%, 95%);
+    border-radius:30px;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2px;
+    width:300px;
+    padding: 20px;
+    text-align: center;
+  }
+  .bg-text:hover{
+    box-shadow:1px 1px 10px rgba(0,0,0,5);
+  }
+  
+  /* Reserve button & search button in booking.html*/
+  .button{
+    box-align: center;
+    padding: 8px 26px;
+    background: rgb(90, 178, 250);
+    color: white;
+    border-radius: 50px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left:20px; 
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.10s;
+  }
+  .button:hover{
+    background: transparent;
+    background: white;
+    color: black;
+    border: 2px solid rgb(102, 101, 101)
+  }
+  

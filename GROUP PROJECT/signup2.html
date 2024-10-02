@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRANS29 Signup</title>
+
+        <!-- Signup style.css-->
+        <link rel="stylesheet" href="signup.css">
+    
+        <!-- tahoma font link-->
+        <link rel="stylesheet" href="https://www.fonts.com/font/atlas-font-foundry/heimat-didone/10-extra-light"> 
+</head>
+<body style="padding-bottom: 100px; font-family: Arial, Helvetica, sans-serif">
+    <div class="borderStyle">
+    <form data-turbo="true" action="/session" accept-charset="UTF-8" method="get">
+        <!-- Phone field-->
+        <label for="Phone">
+            Phone
+            </label>
+            <span class="star"> * </span>
+            <input  style="margin-bottom: 10px;margin-top: 5px;" type="tel" id="number" placeholder="Enter your phone number" name="phone" required>
+    
+            <!--National Id dropdown field-->
+            <label for="cars">National ID</label>
+            <select class="select-container select-box" name="national id" id="national id" required >
+              <option selected disabled hidden>--No National ID selected</option>
+              <option value="Ghana card">Ghana/ECOWAS Card</option>
+              <option value="Passport">Passport</option>
+              <option value="Voters id">Voters ID</option>
+            </select>
+    
+            <!-- National id number field-->
+            <label for="ID number">
+            ID Number
+            </label>
+            <input  style="margin-bottom: 10px;margin-top: 5px;" type="tel" id="tel" placeholder="Enter your National ID number" name="ID Number">
+    
+            <!-- Checkbox-->
+            <div style="padding-top:10px;color: #000">
+            <input type="checkbox" required>I agree to personal data processing <span class="span" style="color: rgb(255, 213, 0);">Privacy Policy</span> 
+            </div>
+        
+            <!-- Signup button container-->
+             <button type="submit" class="finish">Finish</button>
+        </div>
+    </form>
+    <script>
+
+    // Get the dropdown and ID number fields
+    const dropdown = document.getElementById("national id");
+          const idNumberField = document.getElementById("tel");
+
+          // Add an event listener to the dropdown field
+          dropdown.addEventListener("change", function() {
+            // Check if Ghana/ECOWAS card is selected
+            if (dropdown.value === "Ghana card") {
+              // Check if the ID number field already has a value
+              if (!idNumberField.value.startsWith("GHA-")) {
+                // Set the ID number field value with the desired format
+                idNumberField.value = "GHA-";
+              }
+            } else {
+              // Clear the ID number field value for other options
+              idNumberField.value = "";
+            }
+          });
+
+            // Get the form element
+            const form = document.querySelector('form');
+                
+                // Adding an action listener to the form submit button
+                form.addEventListener('submit', function(event){
+                event.preventDefault();// prevent the default form submission
+                
+          document.querySelector('.finish').addEventListener('click',
+          function(){
+              alert('Registration successful! ')
+              window.location.href='homePage.html'
+              });
+            });
+    </script>
+</body>
+</html>

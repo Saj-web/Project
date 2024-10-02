@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRANS29 Signup</title>
+
+    <!-- Signup style.css-->
+    <link rel="stylesheet" href="signup.css">
+    
+    <!-- tahoma font link-->
+    <link rel="stylesheet" href="https://www.fonts.com/font/atlas-font-foundry/heimat-didone/10-extra-light"> 
+
+</head>
+
+<body>
+    <div class="borderStyle">
+      <form data-turbo="true" action="/session" accept-charset="UTF-8" method="get">
+    <!--logo container--> 
+    <div class="imgcontainer"> 
+    <img src="images/Sandy_Tsp-03_Single-02.jpg" alt="EMTRANS.Logo" class="avatar">
+    </div>
+    <div class="container">
+    <h1>Registration</h1>
+    <p style="text-align: center;font: bold;font-size: 18px;color: rgb(185, 2, 2)">Please fill in this form to create an account.</p>
+    </div>
+
+    <!-- Form container-->
+    
+        <!-- Employee ID field-->    
+        <label for="employeeId">
+        Employee ID
+        </label>
+        <span class="star"> * </span>
+        </label>
+        <input style="margin-bottom: 10px;margin-top: 5px;" type="text" id="employeeId" placeholder="Enter Employee ID" name="employeeId" required>
+        
+        <!-- Lastname field-->
+        <label for="fullname">
+        Full Name
+        </label>
+        <span class="star"> * </span>
+        </label>
+        <input style="margin-bottom: 10px;margin-top: 5px;" type="text" id="text" placeholder="Enter your full name" name="fullname" required>
+        
+        <!-- Email field-->
+        <label for="Email">
+        Email
+        </label>
+        <span class="star"> * </span>
+        </label>
+        <input style="margin-bottom: 10px;margin-top: 5px;" type="email" id="email" placeholder="example@gmail.com" name="email" required>
+        
+        <!-- Password field-->
+        <label for="password">
+        Password
+        <span class="star"> * </span>
+        </label>
+        <input type="password" id="Password" placeholder="Enter password" name="password" required>
+                    
+        <!-- Confirm password field-->
+        <label for="password">
+        Confirm Password
+         <span class="star"> * </span>
+        </label>
+        <input type="password" id="Confirm" placeholder="Enter password again" name="password" required>
+
+        <!-- Signup button container-->
+        <button type="submit" id="login" formaction="./signup2.html">
+        Next 
+        </button>
+          <!--Login container-->
+          <div style="text-align: center; margin-top: 10px">
+          <p class="already">Already have an account? <a href="login.html">Login</a></p>
+          </div>
+        </form>   
+        </div>
+    
+    <!--Js-->
+<script>
+        // Get the form element
+        const form = document.querySelector('form');
+    
+        // Adding an action listener to the form submit button
+        form.addEventListener('submit', function(event){
+          event.preventDefault();// prevent the default form submission
+    
+          // Retrieve the entered password and confirm password
+        const Password = document.getElementById('Password').value;
+        const Confirm = document.getElementById('Confirm').value;
+    
+        // Check if the credentials match the user's entered details
+        if(Password === Confirm){
+    
+            // Redirect the employee to it's webpage(homepage)
+            window.location.href='signup2.html';
+        }
+          // Display an error message
+        else{
+            alert('Password mismatch. Please try again.');
+        }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px;
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./632f15f6bb4d2a228b8ee3df_next-webdesign-dienstleistung-website-min.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Border style*/
+.borderStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    min-width: 300px;
+}
+
+ /* Center the avatar image inside this container */
+ .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 35%;
+    border-radius: 50%;
+  }
+
+/* Bordered form */
+form {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 3px solid white;
+    margin: 30px 0 30px 30px;
+  }
+  form:hover{
+    box-shadow: -1px 5px 10px rgba(0,0,0,0.5);
+  }
+
+  /* Adding font to username and password*/
+  label{
+      font-size: 18px;
+  }
+
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+/* Login btn*/
+button {
+    background-color: rgb(255, 213, 0);
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 15px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.05s ease;
+}
+button:hover{ 
+  background-color: rgb(168, 168, 13);
+  color: #fff;
+}
+
+/* Header(Admin login)*/
+h2{
+    text-align: center;
+}
+
+/* Style for RANS in emtrans*/
+span{
+    color: rgb(255, 230, 86);
+    font-style: bold;
+    }
+
+/* Password input field*/
+   .password-container{
+    position: relative;
+}
+
+/* Lock icon position*/
+.lock-icon{
+    position:absolute;
+    top: 48%;
+    right:10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color:grey;
+}
+
+/* Making the passowrd maintain same width as the input field when clicked*/
+   .visible{
+    width: 100%;
+}
+
+/* Selecting password id*/
+#Password{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}

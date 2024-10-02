@@ -1,0 +1,52 @@
+body {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+  
+/* Messages*/
+h2{
+    margin-left: 98px;
+}
+/* Container for the messages*/
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    margin-left:98px; 
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.9);
+}
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Background color for the second notification*/
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+/* Targetting the image in the container*/
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 50%;
+    }
+    
+/*Positioning of time and color*/    
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+/*Targetting a href in the paragraph*/
+p a{
+    color: blue;
+    text-decoration: underline;
+}

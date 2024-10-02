@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  /* Set a style for the entire body*/
+  body{
+    /* background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(./images/istockphoto-960357302-1024x1024.jpg);
+    background-position: center;
+    background-size: cover; */
+    width: 100%;
+    height: 100vh;
+    background-color: #fcfbfb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+    /* Set a style for all buttons */
+button {
+    background-color: rgb(255, 213, 0);
+    color: #000;
+    font-size: 18px;
+    padding: 14px 20px;
+    font-weight: 600;
+    margin: 15px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.10s;
+    animation: slideTop 1s ease forwards;
+  }
+
+    /* Add a hover effect for buttons */
+button:hover {
+    background-color: rgb(191, 159, 0);
+    color: #fff;
+  }
+
+  /* Full-width inputs */
+input[type=text] {
+    width: 100%;
+    border: 2.5px solid #e7e7e7;
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+    outline: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    font-size: 20px;
+    background-color: transparent;
+  }
+
+  /* Bordered form */
+form {
+    width: 400px;
+    /* background: #fff; */
+    background: transparent;
+    /* backdrop-filter: blur(20px); */
+    padding: 20px;
+    border-radius: 10px;
+    /* border: 3px solid #f1f1f1; */
+  }
+
+  .landing:hover{
+    box-shadow: -2px 5px 10px rgba(0,0,0,0.5);
+  }
+
+  .landing {
+    width: 95%;
+    height: 90vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(smiley-woman-posing-car.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 10% 50px;
+  }
+
+  .landing h1 {
+    letter-spacing: 3px;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 13px;
+    opacity: 0;
+    animation: slideBottom 2s ease forwards;
+    animation-delay: .6s;
+  }
+
+  label{
+    text-decoration: none;
+    color: #080808;
+    font-size: 20px;
+    padding: 10px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+  }
+
+  /* KEYFRAMES */
+@keyframes slideRight {
+  0% {
+      transform: translateX(-100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+      transform: translateY(-100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideSci {
+  0% {
+      transform: translateX(100px) rotate(45deg);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+      transform: translateX(100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+  
